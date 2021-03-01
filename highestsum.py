@@ -12,9 +12,11 @@ At the output: number
 
 def max_digit_sum(n):
     biggest_so_far = 0
-    sum = 0
-    for digit in str(n):
-        sum += int(digit)
-        n = n-1
-    return biggest_so_far
-max_digit_sum(54)
+    biggest_int = 0
+    for i in range(n,0,-1):
+        sum_of_digits = sum(int(digit) for digit in str(i))
+        if sum_of_digits > biggest_so_far:
+            biggest_so_far = sum_of_digits
+            biggest_int = i
+    return biggest_int
+
