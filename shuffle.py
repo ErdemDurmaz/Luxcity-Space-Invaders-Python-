@@ -1,5 +1,5 @@
 import random
-output = [0]
+
 base_list = [23,55,74,744,13,6,3,6223]
 def indexer(list):
     indices = []
